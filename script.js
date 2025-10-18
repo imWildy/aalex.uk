@@ -1,15 +1,15 @@
-document.querySelectorAll('a[href^="http"]').forEach(link => {
-  if (!link.href.includes(location.hostname)) {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-  }
-});
+const peerConnection = new RTCPeerConnection({ iceServers: [] });
+  const el = document.getElementById('ip')
+  peerConnection.createDataChannel('');
 
-window.addEventListener('DOMContentLoaded', () => {
-  const el = document.getElementById('email');
-  if (!el) return;
-  const encoded = el.dataset.enc;
-  const email = String.fromCharCode(...encoded.split(',').map(n => parseInt(n, 10)));
-  el.href = 'mailto:' + email;
-  el.textContent = email;
-});
+  peerConnection.createOffer()
+    .then((offer) => peerConnection.setLocalDescription(offer))
+    .catch((error) => console.log(error));
+
+  peerConnection.onicecandidate = (event) => {
+  if (event.candidate) {
+    el.textContent = event.candidate.address;
+  } else {
+    el.textContent = 'unknown (nice opsex)';
+  };
+};
