@@ -1,9 +1,15 @@
-const el = document.getElementById('ip');
-fetch("https://api.ipify.org/?format=json")
-  .then(response => response.json())
-  .then(data => {
-    el.textContent = data.ip;
-})
-.catch(error => {
-  el.textContent = 'anon (nice opsex)';
+document.querySelectorAll('a[href^="http"]').forEach(link => {
+  if (!link.href.includes(location.hostname)) {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('email');
+  if (!el) return;
+  const encoded = el.dataset.enc;
+  const email = String.fromCharCode(...encoded.split(',').map(n => parseInt(n, 10)));
+  el.href = 'mailto:' + email;
+  el.textContent = email;
 });

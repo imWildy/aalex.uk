@@ -62,11 +62,24 @@ header {
   transition: 0.1s;
 }
 
-.mid {
-  font-weight: 600;
-  transform: translateY(2vh);
+footer {
+  transform: translateY(17vh);
 }
 
-.btm {
-  transform: translateY(4vh);
+@media only screen and (max-width: 700px) {
+  .body-section {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .body-section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .body-section {
+    font-size: 0.9rem;
+  }
 }
