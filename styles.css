@@ -66,6 +66,23 @@ header {
   transition: 0.1s;
 }
 
+#skills-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 450px; 
+  margin: 0 0;  
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.skills-column p {
+	margin-top: 0px;
+}
+
 @media only screen and (max-width: 700px) {
   .body-container {
     width: 90%;
