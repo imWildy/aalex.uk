@@ -100,3 +100,24 @@ header {
     font-size: 0.9rem;
   }
 }
+
+/*-----404.html-----*/
+#container-404 {
+  text-align: center;
+}
+
+#container-404 #title-text {
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+}
+
+#container-404 #footer-text {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#container-404 img {
+  width: 40vw;
+  height: auto;
+  border-radius: 2rem;
+}
