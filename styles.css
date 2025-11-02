@@ -58,7 +58,7 @@ header {
   border: black solid 0.2rem;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
 .body-container a:hover {
