@@ -17,7 +17,7 @@ function getFont(changeFont) {
   document.body.classList.toggle('roboto-font', savedFont === 'Roboto');
   document.body.classList.toggle('hack-font', savedFont === 'Hack');
 
-  fontBtn.textContent = savedFont === 'Roboto' ? 'Hack' : 'Roboto';
+  return savedFont;
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -27,4 +27,23 @@ window.addEventListener('DOMContentLoaded', () => {
   const email = String.fromCharCode(...encoded.split(',').map(n => parseInt(n, 10)));
   el.href = 'mailto:' + email;
   el.textContent = email;
+
+  // force cancerous browser to play the video
+  const video = document.querySelector('video');
+  const promise = video.play();
+});
+
+const fontBtn = document.getElementById('font-btn');
+fontBtn.addEventListener('click', () => {
+  const fontPopup = document.getElementById('font-popup');
+  const popupText = document.getElementById('popup-text');
+  const savedFont = getFont(false);
+
+  popupText.textContent = `Changed font to ${savedFont}.`;
+  fontPopup.style.display = 'inline-block';
+  fontPopup.style.animation = 'popup-animation 1s';
+
+  fontPopup.addEventListener('animationend', () => {
+    fontPopup.style.display = 'none';
+  }, { once: true });
 });

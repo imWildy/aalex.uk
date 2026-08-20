@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <meta name="og:site_name" content="aalex.uk">
     <meta name="og:type" content="object">
     <meta name="og:title" content="alex">
@@ -12,26 +12,23 @@
     <title>alex</title>
 </head>
 <body class="roboto-font" onload="getFont(false)">
+    <div id="popup-container">
+        <div id="font-popup"><span id="popup-text"></span></div>
+    </div>
+
     <div class="body-container">
         <header>
-            <button id="font-btn" onclick="getFont(true)"></button>
+            <button id="font-btn" onclick="getFont(true)">Change Font</button>
             <span id="title-text"><a href="#">aalex.uk</a></span>
         </header>
 
-        <p>Hey, I'm Alex - a software developer from England.</p>
-        <p>I first started programming in 2020 when I started making shitty Python scripts (skidware ong) and ass websites (just like this one!).
-           I also started with using a Micro:Bit, a small simple computer, and also slightly used a Raspberry Pi 4B but rarely used as I hardly knew Linux at the time.</p>
-           
-        <p>Then in early 2024, I re-introduced myself to Python and also started to learn JavaScript. I started to create Discord bots in both
-           languages and also Minecraft bots using the Mineflayer/node-minecraft-protocol libraries.
+        <p>Hey, I'm Alex — a software developer from England.</p>
+        <p>I started programming in 2020 with random skidded Python programs (true programmer trust) and making random projects.
+           Eventually I moved onto JavaScript to make websites along with HTML/CSS (like this one). I created more random Python projects later one (around 2024)
+           but more advanced and actually understanding what I wrote, this is where I started actually programming from self-teaching myself about basic computing. 
+           In 2024 I created a few Discord bots using both Python and JavaScript, I also used Mineflayer to create Minecraft bots.
         </p>
-        <p>I now make a wide range of different projects but still mainly Minecraft bots using JavaScript, but I occasionally also make some
-           Python skid shit too!
-        </p>
-        <p>I'm currently studying C# and VB (ass language) and occasionally using some random language for a project.
-           I also got into self-hosting my own software and using decentralised applications - such as Matrix, and started relying less on
-           cloud-based software.
-        </p>
+        <p>Currently I usually work on Minecraft-related projects using a range of different languages.</p>
 
         <br>
         <h1>Skills:</h1>
@@ -42,19 +39,18 @@
                 <p>> HTML/CSS</p>
             </div>
             <div class="skills-column">
-                <p>> C# (.NET)</p>
-                <p>> Java (learning)</p>
-                <p>> Linux/Unix Systems</p>
+                <p>> C#</p>
+                <p>> Java (somewhat)</p>
+                <p>> Linux Systems</p>
             </div>
         </div>
         <br>
         <h1>Links:</h1>
-        <p>> <a href="https://github.com/alxuk">github.com</a> — my GitHub page</p>
-        <p>> <a href="https://signal.me/#eu/D9jGNCqWGl2Rap0cxObHtyDkGV5_hkeINuSPky4djA4UCxUHi7lEfrpdsLkY6MCH">signal.me</a> — @aalex.24</p>
-        <p>> <a href="https://matrix.to/#/@alex:a.aalex.uk">matrix.to</a> — my matrix account</p>
-        <p>> <a href="mailto:contact@aalex.uk" id="email" data-enc="99,111,110,116,97,99,116,64,97,97,108,101,120,46,117,107"></a> — my email</p>
+        <p>> GitHub: <a href="https://github.com/alxuk">@alxuk</a></p>
+        <p>> Signal: <a href="https://signal.me/#eu/D9jGNCqWGl2Rap0cxObHtyDkGV5_hkeINuSPky4djA4UCxUHi7lEfrpdsLkY6MCH">@aalex.24</a></p>
+        <p>> Email:  <a href="#" id="email" data-enc="109,101,64,97,97,108,101,120,46,117,107"></a></p>
     </div>
 
-    <script src="script.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
